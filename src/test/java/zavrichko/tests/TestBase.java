@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestBase {
     @BeforeAll
     static void setUp() throws MalformedURLException {
-      //  Configuration.remote = "http://149.154.70.38:4444/wd/hub";
+        Configuration.remote = "http://149.154.70.38:4444/wd/hub";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         ChromeOptions options = new ChromeOptions();
@@ -36,7 +36,7 @@ public class TestBase {
        Attach.screenshotAs("Last screenshot");
        Attach.pageSource();
        Attach.browserConsoleLogs();
-//       Attach.addVideo();
+      Attach.addVideo();
        closeWebDriver();
     }
 }
